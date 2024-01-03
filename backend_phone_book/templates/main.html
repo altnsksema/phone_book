@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Screen</title>
+</head>
+<body>
+    <h2>Main Screen</h2>
+    <ul>
+        {% for person in people %}
+            <li>
+                <a href="{{ url_for('person', person_id=person.id) }}">
+                    {{ person.name }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
